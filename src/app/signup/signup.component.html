@@ -1,0 +1,71 @@
+<div class="col" id="yp-auth-btns-container">
+
+            <label id="yp-ld-signin-lbl">Sign into your <strong>Account</strong></label>
+
+            <!--EMAIL SECTION-->
+            <div class="row" style="background: #fff" id="yp-ld-login-input-cont">
+                  <div class="col-1">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                  </div>
+                  <div class="col">
+                        <input class="form-control form-control-lg" type="text" placeholder="email" [(ngModel)]="email" required>
+                  </div>
+            </div>
+
+            <hr style="width: 100%; margin: 0; background: tansparent;">
+
+            <!--PASSWORD CONTAINER-->
+            <div class="row" style="background: #fff" id="yp-ld-login-input-cont">
+                  <div class="col-1">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                  </div>
+                  <div class="col">
+                        <input class="form-control form-control-lg" type="password" placeholder="password" [(ngModel)]="password" required>
+                  </div>
+            </div>
+            <hr style="width: 100%; margin: 0; background: tansparent;">
+
+            <!--NICKNAME SECTION-->
+            <div class="row" style="background: #fff" id="yp-ld-login-input-cont">
+                  <div class="col-1">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+                  <div class="col">
+                        <input class="form-control form-control-lg" type="text" placeholder="nickname" [(ngModel)]="nickname" required>
+                  </div>
+            </div>
+
+            <hr style="width: 100%; margin: 0; background: tansparent;">
+
+            <!--PROFESSION SECTION-->
+            <div class="row" style="background: #fff" id="yp-ld-login-input-cont">
+                  <div class="col-1">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                  </div>
+                  <div class="col">
+                        <input class="form-control form-control-lg" type="text" placeholder="profession" [(ngModel)]="profession" required>
+                  </div>
+            </div>
+
+            <hr style="width: 100%; margin: 0; background: tansparent;">
+
+            <!--AGE SECTION-->
+            <div class="row" style="background: #fff" id="yp-ld-login-input-cont">
+                  <div class="col-1">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                  </div>
+                  <div class="col">
+                        <input class="form-control form-control-lg" type="text" placeholder="age" [(ngModel)]="age" required>
+                  </div>
+            </div>
+
+            <!--SEND LOGIN BUTTON SECTION-->
+            <div class="row">
+                  <div class="col" id="yp-ld-send-login-btn-cont">
+                        <button type="button" class="btn btn-lg btn-block" id="yp-ld-login-btn" (click)="send()">
+                              <span *ngIf="!busy">Signin</span>
+                              <i class="fa fa-spinner" aria-hidden="true" *ngIf="busy"></i>
+                        </button>
+                  </div>
+            </div>
+</div>

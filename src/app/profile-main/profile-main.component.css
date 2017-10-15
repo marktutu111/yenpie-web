@@ -1,0 +1,47 @@
+#yp-hm-prf-main-cont hr {
+    width: 30%;
+    float: left;
+}
+
+
+
+#yp-hm-pf-edit-lb {
+    margin-top: 10px;
+    clear: left;
+}
+
+
+#yp-prof-icons {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #fa2955;
+    border-radius: 100%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+
+
+
+#yp-prof-lb {
+    font-size: 25px;
+    color: #555;
+}
+
+
+.yp-mood-photo-cont {
+    border-radius: 2px;
+    height: 100px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    background: #eee;
+}
+
+
+.yp-mood-photo-cont img {
+    width: 100%;
+}

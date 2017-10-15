@@ -1,0 +1,89 @@
+#yp-hm-mood-sld {
+    height: 85vh;
+    background: #fff;
+    margin: 2% auto;
+    overflow: hidden;
+    padding: 0;
+    width: 30vw;
+    padding: 5px;
+    border: solid thin #eee;
+    display: block;
+    position: relative;
+}
+
+
+#yp-hm-mood-sld .col {
+        margin: 0;
+        padding: 0;
+        clear: both;
+}
+
+
+
+#yp-hm-md-desc-cont {
+        background: rgba(255, 0, 10, 0.6);
+        color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10px;
+        width: 95%;
+        margin: auto;
+        z-index: 1;
+}
+
+
+
+#yn-hm-md-name-cont {
+        width: 100%;
+}
+
+
+
+#yp-hm-md-date {
+        float: right;
+}
+
+
+#yp-hm-md-photo-cont {
+        display: block;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        background: #eee;
+        overflow: hidden;
+}
+
+#yp-hm-md-photo {
+        height: 100%;
+        z-index: 0;
+}
+
+
+
+#yb-hm-md-request-btn {
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 50% auto;
+        position: absolute;
+        z-index: 2;
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        background: transparent;
+        border: solid thin #fff;
+        color: #fff;
+        font-size: 30px;
+}
+
+
+#yb-hm-md-request-btn:hover {
+    cursor: pointer;
+    background: #eee;
+    color: #fa2955;
+}

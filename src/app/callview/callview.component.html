@@ -1,0 +1,55 @@
+<div id="yp-hm-callv-cont">
+
+    <!--REMOTE VIDEO CONTAINER  -->
+     <div id="yp-vid-0"></div>
+
+    <div id="yp-hm-cal-dur-cont">
+        <label>{{ callduration }}</label>
+    </div>
+
+
+    <div id="yp-vid-1-cont">
+        <video width="100%" height="100%" muted="true" autoplay="true" id="yp-vid-1"></video>
+    </div>
+
+<!-- 
+    <div id="yp-vid-photo-thumnail-cont">
+
+        <img src="../../assets/image.jpg" alt="">
+        
+    </div> -->
+
+
+    <div id="yp-hm-callv-controls-cont">
+
+        <div class="row">
+          
+            <div class="col-md">
+                <button type="button" class="btn btn-sm btn-block" (click)="cancel()">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="col-md">
+                <button type="button" class="btn btn-sm btn-block" (click)="toggleVideo()">
+                  <i class="fa fa-video-camera" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="col-md">
+                <button type="button" class="btn btn-sm btn-block" (click)="micOff()">
+                  <i class="fa fa-microphone-slash" aria-hidden="true">
+                </i></button>
+            </div>
+
+            <div class="col-md">
+                <button type="button" class="btn btn-sm btn-block" (click)="mute()">
+                    <i class="fa fa-volume-off" aria-hidden="true"></i>
+               </button>
+            </div>
+
+        </div>
+      
+    </div>
+  
+</div>

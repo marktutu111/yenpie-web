@@ -1,0 +1,28 @@
+<ul>
+
+        <div id="yp-hm-mood-sld" *ngFor="let $user of moods$; let i = index">
+
+             <div id="yp-hm-md-desc-cont">
+
+                <label id="yn-hm-md-name-cont">
+                    <span id="yp-hm-md-name">{{ $user.name }}</span>
+                    <span id="yp-hm-md-date">{{ $user.mood_created }}</span>
+                </label>
+
+                <p>{{ $user.description }}</p> 
+
+            </div>   
+
+              <button type="button" id="yb-hm-md-request-btn" class="btn" *ngIf="!$user.friend">
+                <i class="fa fa-chain" aria-hidden="true" *ngIf="!$user.requested" (click)="sendRequest(i)"></i> 
+                <i class="fa fa-chain-broken" aria-hidden="true" *ngIf="$user.requested" (click)="cancelRequest(i)" style="color: #fa2955;"></i>
+            </button>
+
+            <div id="yp-hm-md-photo-cont">
+                <img [src]="$user.photo" alt="" id="yp-hm-md-photo">
+            </div>
+          
+        </div> 
+   
+</ul>
+

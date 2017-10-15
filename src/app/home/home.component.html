@@ -1,0 +1,67 @@
+<!--HEADER SECTION-->
+<div  class="row" id="yp-hm-hd-cont">
+
+    <div class="col-md">
+        <div id="yp-hm-hd-logo-cont">
+            <a [routerLink]="['../home']"><img src="../../assets/yp-logo-2.png" alt=""></a>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+          <input type="text" class="form-control form-control-sm" id="yp-hm-srch-box"  
+                 placeholder="Search" *ngIf="search" [(ngModel)]="searchWord" (keyup)="searchMoods($event)">
+    </div>
+
+
+    <!--HEADER NAVBAR BUTTONS-->
+    <div class="col-2-md" id="yp-hm-hd-nav-btns-cont">
+
+          <!--REQUEST BUTTON-->
+          <button type="button" class="btn btn-sm">
+              <span id="yb-hm-mes-badge" *ngIf="$requests.length > 0">{{ $requests.length }}</span>
+              <i class="fa fa-chain" aria-hidden="true" (click)="toggleRequests = !toggleRequests"></i>
+              <app-requests-dropdown-menu [$requests]="$requests" [$userid]="$userid" *ngIf="toggleRequests"></app-requests-dropdown-menu>
+              
+          </button>
+
+            <!--MEMORIES BUTTON-->
+          <button type="button" class="btn btn-sm" [routerLink]="[{ 'outlets' : { '0' : ['memories']} }]" (click)="searchWord = ''">
+              <i class="fa fa-history" aria-hidden="true"></i>
+          </button>
+
+            <!--MESSAGES BUTTON-->
+          <button type="button" class="btn btn-sm" [routerLink]="[{ 'outlets' : { '0' : ['chats']} }]" 
+                  (click)="$messages.length = 0; $messagesCount = 0; searchWord = ''">
+              <span id="yb-hm-mes-badge" *ngIf="$messages.length > 0">{{ $messagesCount }}</span>
+              <i class="fa fa-comment" aria-hidden="true"></i>
+          </button>
+
+          <!--PROFILE BUTTON-->
+          <button type="button" class="btn btn-sm" [routerLink]="[{ 'outlets' : { '0' : ['profile']} }]" (click)="searchWord = ''">
+              <i class="fa fa-user" aria-hidden="true"></i>
+          </button>
+    </div>
+    <!--END HEADER NAVBAR-->
+  
+</div>
+<!--END-->
+
+
+<!-- MAIN VIEW-->
+ <div class="row" id="yp-hm-main">
+      <div class="col-md">
+
+            <router-outlet name="0" *ngIf="!searchWord.length > 0"></router-outlet>
+            <app-search-view [searchList$]="searchList$" *ngIf="searchWord.length > 0"></app-search-view>
+            <simple-notifications [options]="options"></simple-notifications>
+
+      </div>
+</div> 
+<!--END MAIN VIEW-->
+
+
+
+<!--FOOTER CONTAINER-->
+<hr id="yp-ld-hr">
+
+<app-footer></app-footer>

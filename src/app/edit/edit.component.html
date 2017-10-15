@@ -1,0 +1,48 @@
+<ul id="yp-hm-pr-edit-cont">
+
+            <h2>
+                  <span>Edit Profile</span>
+            </h2>
+            <hr>
+
+            <!--  -->
+            <div class="row" id="yp-hm-pf-edit-btns-cont">
+                  <div class="col-md-1">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md">
+                        <input class="form-control form-control-lg" type="text" 
+                               placeholder="nickname" [(ngModel)]="nickname" (blur)="saveNickname()">
+                  </div>
+                  <div class="col-md-2" *ngIf="savenickname">
+                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                  </div>
+            </div>
+
+            <div class="row" id="yp-hm-pf-edit-btns-cont">
+                  <div class="col-md-1">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md">
+                        <input class="form-control form-control-lg" type="number" 
+                               placeholder="age" [(ngModel)]="age" required (blur)="saveAge()">
+                  </div>
+                  <div class="col-md-2" *ngIf="saveage">
+                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                  </div>
+            </div>
+
+            <div class="row"  id="yp-hm-pf-edit-btns-cont">
+                  <div class="col-md-1">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                  </div>
+                  <div class="col-md">
+                        <input class="form-control form-control-lg" type="text" 
+                               placeholder="profession" [(ngModel)]="profession" (blur)="saveProfession()">
+                  </div>
+                  <div class="col-md-2" *ngIf="saveprofession">
+                    <i class="fa fa-spinner" aria-hidden="true"></i>
+                  </div>
+            </div>
+
+        </ul>

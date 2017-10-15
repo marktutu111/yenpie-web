@@ -1,0 +1,40 @@
+<div class="row" id="yp-hm-req-drpdown">
+        <i class="fa fa-caret-up" aria-hidden="true" id="yp-req-drpdown-arrow" *ngIf="$requests.length > 0"></i>
+    <ul id="yp-req-list-cont">
+
+            <div class="row" id="yp-hm-req-list-item" *ngFor="let request of $requests; let i = index;">
+                  <div id="yp-list-item-cont-left">
+                      <div id="yp-req-list-photo-child">
+                            <img [src]="request.photo" alt="">
+                      </div>
+                  </div>
+                  <div class="col-md" id="yp-list-item-cont-right">
+                      <div>{{ request.nickname }}</div>
+                      <div>Wants to connect with you.</div>
+                        <div id="buttons-container">
+                          <span>
+                              <button type="button" class="btn btn-sm" id="accept" (click)="accept(i)" *ngIf="!request.accepted">
+                                  <a *ngIf="!request.accept">Accept</a>
+                                  <i class="fa fa-spinner" aria-hidden="true" *ngIf="request.accept"></i>
+                              </button>
+                               <button type="button" class="btn btn-sm" id="accept" *ngIf="request.accepted">
+                                  <i class="fa fa-check" aria-hidden="true" *ngIf="request.accepted"></i>
+                              </button> 
+                          </span>
+                          <span>
+                              <button type="button" class="btn btn-sm" id="reject" (click)="reject(i)" *ngIf="!request.rejected">
+                                  <a *ngIf="!request.reject">Reject</a>
+                                  <i class="fa fa-spinner" aria-hidden="true" *ngIf="request.reject"></i>
+                                  <i class="fa fa-check" aria-hidden="true" *ngIf="request.rejected"></i>
+                              </button>
+                              <button type="button" class="btn btn-sm" id="reject" *ngIf="request.rejected">
+                                  <i class="fa fa-check" aria-hidden="true" *ngIf="request.rejected"></i>
+                              </button>
+                          </span>
+                      </div> 
+                  </div>
+                  <hr>
+              </div>
+
+        </ul>
+</div>

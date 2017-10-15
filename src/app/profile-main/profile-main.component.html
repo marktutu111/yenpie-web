@@ -1,0 +1,44 @@
+<ul id="yp-hm-prf-main-cont">
+
+      <h2>Profile</h2>
+      <hr>
+      <div id="yp-hm-pf-edit-lb" class="row">
+          <div class="col-md-3">
+              <i class="fa fa-user" aria-hidden="true" id="yp-prof-icons" *ngIf="nickname$ !== ''"></i>
+              <i class="fa fa-spinner fa-spin" aria-hidden="true" *ngIf="nickname$ == ''" id="yp-prof-icons"></i>  
+          </div>
+          <div class="col-md" id="yp-prof-lb">{{ nickname$ }}</div>
+      </div>
+
+      <div id="yp-hm-pf-edit-lb" class="row">
+          <div class="col-md-3">
+              <i class="fa fa-calendar" aria-hidden="true" id="yp-prof-icons" *ngIf="age$ !== ''"></i>
+              <i class="fa fa-spinner fa-spin" aria-hidden="true" *ngIf="age$ == ''" id="yp-prof-icons"></i> 
+          </div>
+          <div class="col-md" id="yp-prof-lb">{{ age$ }}</div>
+      </div>
+
+      <div id="yp-hm-pf-edit-lb" class="row">
+          <div class="col-md-3">
+              <i class="fa fa-briefcase" aria-hidden="true" id="yp-prof-icons" *ngIf="profession$ !== ''"></i>
+              <i class="fa fa-spinner fa-spin" aria-hidden="true" *ngIf="profession$ == ''" id="yp-prof-icons"></i>
+          </div>
+          <div class="col-md" id="yp-prof-lb">{{ profession$ }}</div>
+      </div>
+        
+      <br>
+      <h2>Mood</h2>
+      <hr>
+      <div id="yp-hm-pf-edit-lb" class="yp-mood-photo-cont">
+          <img [src]="mdphoto$" alt="">
+      </div>
+      <div id="yp-hm-pf-edit-lb"><p>{{ mdDescription$ }}</p></div>
+      <div id="yp-hm-pf-edit-lb" class="row">
+          <div class="col-md-3">
+              <i class="fa fa-clock-o" aria-hidden="true" id="yp-prof-icons" *ngIf="mdDate$ !== ''"></i>
+              <i class="fa fa-spinner fa-spin" aria-hidden="true" *ngIf="mdDate$ == ''" id="yp-prof-icons"></i>
+          </div>
+          <div class="col-md" id="yp-prof-lb">{{ mdDate$ }}</div>
+      </div>
+
+</ul>

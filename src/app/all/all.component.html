@@ -1,0 +1,25 @@
+<div class="row">
+
+  <div class="col-md" id="yp-hm-mm-cont">
+
+        <i class="fa fa-spinner fa-spin" aria-hidden="true" *ngIf="!memories$[0]" id="yp-mmv-spinner-2"></i> 
+
+        <ul>
+            <div id="yp-hm-mm-list-item" *ngFor="let memory of memories$; let i = index;">
+
+                  <div id="yp-hm-mm-pic-cont">
+                    <img [src]="memory.photo" alt="">
+
+                  </div>
+
+                  <div id="y-hm-mm-list-desc-cont" [routerLink]="[{ 'outlets': { '1' : ['id' , memory.key]} }]">
+                    <p>{{ memory.description }}</p>
+                    <label>{{ memory.date }}</label>
+                  </div>
+
+            </div>
+        </ul>
+    
+  </div>
+  
+</div>

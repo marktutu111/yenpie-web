@@ -1,0 +1,46 @@
+<div class="container">
+
+
+        <div class="row" id="yp-hm-pf-cont">
+
+                <div class="col-md-4" id="yp-hm-pf-col-0">
+
+
+                    <div id="yp-hm-pf-photo-cont">
+                        <img [src]="photo$" alt=""> 
+                        <button type="button" id="yp-hm-pf-cm-pik-photo-btn" class="btn btn-block" (click)="pickmood.click()">
+                                <i class="fa fa-photo" aria-hidden="true" *ngIf="!savephoto"></i>
+                                <i class="fa fa-spinner" aria-hidden="true" *ngIf="savephoto"></i>
+                                <input type="file" #pickmood (change)="fileChangeEvent($event)" hidden>
+                        </button>
+                    </div>
+
+                    <ul> 
+                        
+                        <button type="button" id="" class="btn btn-sm btn-block" [routerLink]="[{ 'outlets': {'p': ['edit']}}]">Edit Profile</button>
+
+                        <button type="button" id="" class="btn btn-sm btn-block" [routerLink]="[{ 'outlets': {'p': ['create-mood']}}]">Create Mood</button>
+                        <br>
+                        <button type="button" id="" class="btn btn-sm btn-block" (click)="logout()">
+                            <span>logout</span>
+                            <i class="fa fa-spinner" aria-hidden="true" *ngIf="loggingOut"></i>
+                        </button>
+                        
+                    </ul>
+
+                    <div id="scollbar">
+                            <div id="pointer"></div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="col-md-6" id="yp-hm-pf-col-1">
+
+                    <router-outlet name="p"></router-outlet>
+                    
+                </div>
+      
+    </div>
+    
+</div>

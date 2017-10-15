@@ -1,0 +1,215 @@
+#yenpie-landing-page {
+
+    clear: both;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/yp-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+
+#yenpie-landing-page #yp-pst-bg {
+
+        height: 90vh;
+
+}
+
+
+#yenpie-landing-page #yp-ld-img {
+
+    width: 100vw;
+
+}
+
+
+#yenpie-landing-page #yp-auth-container {
+
+        background: rgba(255, 255, 255, 0.6);
+        width: 50%;
+        height: 400px;
+        margin: 20% auto;
+        border-radius: 10px;
+        overflow-y: scroll;
+}
+
+
+#yenpie-landing-page #yp-auth-container label {
+
+        text-align: center;
+        font-size: 20px;
+        margin: 20px;
+
+}
+
+
+#yp-ld-login-btn {
+
+        background: #fa2955;
+        color: #fff;
+
+}
+
+
+#yp-ld-login-btn:hover {
+
+        cursor: pointer;
+        opacity: 0.9;
+}
+
+
+
+#yp-ld-rcp-container {
+
+    margin: 20px auto;
+    text-align: center;
+
+}
+
+
+#yp-ld-rcp-container button {
+        background: transparent;
+        color: #fa2955;
+        text-align: center;
+        width: 100%;
+}
+
+
+#yp-ld-hr {
+
+    width: 80%;
+    margin: 5px auto;
+
+}
+
+#yp-ld-footer {
+        height: 8vh;
+        width: 100%;
+        color: #6D6D6D;
+        padding: 10px;
+        margin: 0;
+}
+
+
+#yp-ld-header-buttons-container button {
+
+        background: transparent;
+}
+
+
+
+#yp-ld-login-input-cont i {
+
+        margin: 22px auto;
+        color: #fa2955;
+
+}
+
+
+#yp-ld-login-input-cont input {
+        border: 0 none transparent;
+        font-size: 20px;
+        margin: 5px auto;
+}
+
+
+
+#yp-ld-signin-lbl {
+        margin: 10px auto;
+        text-align: center;
+}
+
+
+
+#yp-ld-send-login-btn-cont {
+        margin: 25% auto;
+}
+
+
+
+#yp-ld-send-login-btn-cont button {
+        border: 0 none transparent;
+        border-radius: 0;
+        width: 60%;
+        margin: auto;
+}
+
+
+#yp-ld-close-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: 1px solid #fff;
+        color: #fa2955;
+        margin: 20% auto;
+        background: transparent;
+        background: #EEE;
+}
+
+
+#yp-ld-close-btn i {
+        margin: -6px;
+}
+
+
+
+#yp-ld-close-btn:hover {
+        background: #fff;
+}
+
+
+#yp-auth-btns-container {
+        margin: 20px auto;
+        width: 100%;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+ 
+::-webkit-scrollbar-thumb {
+        margin-top: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+
+input {
+        box-shadow: none;
+}
+
+
+::-webkit-input-placeholder {
+        color: #ddd;
+}
+
+
+::-moz-placeholder {
+        color: #ddd;
+}
+
+
+
+.loding-indicator {
+        display: block;
+        text-align: center;
+        width: 60px;
+        height: 50px;
+        font-size: 20px;
+        color: #ddd;
+        margin: 20% auto;
+}

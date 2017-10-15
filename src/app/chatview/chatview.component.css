@@ -1,0 +1,20 @@
+#yp-hm-cht-em-cont {
+    position: absolute;
+    bottom: 11vh;
+    height: 400px;
+    width: 50%;
+    background: #fafafa;
+    border-radius: 10px;
+    left: 10px;
+}
+
+
+#yb-hm-cht-btn-sticker:focus {
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#yp-hm-cht-em-cont::-webkit-scrollbar {
+    visibility: collapse;
+}

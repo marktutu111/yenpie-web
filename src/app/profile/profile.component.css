@@ -1,0 +1,12 @@
+#prof-cont {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    color: #666;
+}
+
+
+#prof-cont i {
+    color: #ffb6c1;
+    text-align: center;
+}

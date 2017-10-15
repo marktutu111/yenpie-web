@@ -1,0 +1,190 @@
+#hm-wrapper {
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+
+#yp-hm-hd-cont {
+        margin: auto;
+        height: 6vh;
+        background: #fa2955;
+        opacity: 0.9;
+}
+
+
+#yp-hm-hd-logo-cont {
+        width: 60px;
+        height: 45px;
+}
+
+
+#yp-hm-hd-logo-cont img {
+        height: 100%;
+        width: auto;
+}
+
+
+
+#yp-hm-hd-nav-btns-cont button {
+        width: 50px;
+        height: 40px;
+        margin-right: 20px;
+        background: transparent;
+        font-size: 20px;
+        color: #fff;
+        border-radius: 0;
+        box-shadow: none;
+}
+
+
+#yp-hm-hd-nav-btns-cont button:focus {
+        border: none;
+        background: rgba(0, 0, 0, 0.1);
+}
+
+
+
+#yp-hm-hd-nav-btns-cont button:hover {
+        cursor: pointer;
+}
+
+
+#yp-hm-main {
+        height: auto;
+        min-height: 93vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+
+}
+
+
+
+#yb-hm-mes-badge {
+    font-size: 10px;
+    background: #fff;
+    border-radius: 2px;
+    padding: 5px;
+    color: #fa2955;
+    margin-right: -35px;
+    margin-top: 5px;
+    float: right;
+}
+
+
+
+#yp-hm-srch-box {
+        padding: 5px;
+        border: none;
+        margin: 7px auto;
+}
+
+
+#yp-hm-req-drpdown {
+        width: 25vw;
+        height: auto;
+        float: left;
+        margin-left: -150px;
+}
+
+
+
+
+#yp-req-list-cont {
+        background: #fff;
+        box-shadow: 0px 0 1px 1px  rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 5px 5px;
+        padding: 0;
+        margin: 0;
+}
+
+
+
+#yp-req-drpdown-arrow {
+        margin-left: 160px;
+}
+
+
+#yp-req-list-photo-child {
+    width: 62px;
+    height: 62px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 3px auto;
+}
+
+
+
+#yp-req-list-photo-child img {
+        width: 100%;
+}
+
+
+
+#yp-hm-req-list-item {
+        background: #fafafa;
+        border-radius: 2px;
+        margin: 5px;
+        height: 95px;
+}
+
+
+
+#yp-list-item-cont-left {
+        width: 5vw;
+        padding-top: 5px;
+        padding-left: 2px;
+}
+
+
+#yp-list-item-cont-right {
+        width: 15vw; 
+        text-align: left;
+        color: #6D6D6D;
+        font-size: 15px;
+        padding-top: 10px;
+}
+
+
+#yp-list-item-cont-right #buttons-container {
+        width: 100%;
+        margin: 5px auto;
+        position: relative;
+        z-index: 1;
+}
+
+#yp-list-item-cont-right span {
+        padding: 0;
+        margin: 0;
+        float: left;
+        width: 50%;
+}
+
+
+
+#yp-list-item-cont-right button {
+        color: #fff;
+        font-size: 12px;
+        padding: 5px;
+        width: 95%;
+}
+
+
+
+#yp-list-item-cont-right button:hover {
+        cursor: pointer;
+}
+
+
+
+#yp-list-item-cont-right #accept {
+        background: #8D6D8D;
+}
+
+
+
+#yp-list-item-cont-right #reject {
+        background: #ffb6c1;
+        color: #8D6D8D;
+}

@@ -1,0 +1,96 @@
+#yp-hm-mmv-cont ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+#yp-hm-mmv-cont {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+#yp-hm-mmv-list-item {
+    overflow: hidden;
+    height: 100vh;
+    width: 35%;
+    margin: 0 auto;
+}
+
+
+
+#yp-hm-mmv-list-item img {
+    width: 100%;
+}
+
+
+
+
+#yp-hm-mmv-cont #likes-cont {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100px;
+    top: 35%;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+#yp-hm-mmv-cont #likes-cont span {
+    padding: 5px;
+}
+
+
+
+#yp-hm-mmv-cont #like {
+    position: fixed;
+    top: 45vh;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    font-size: 40px;
+    background: transparent;
+    border: solid thin #eee;
+    color: #fff;
+}
+
+
+
+
+#yp-hm-mmv-cont #liked {
+    position: fixed;
+    top: 45vh;
+    left: 0;
+    right: 0;
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: solid thin #eee;
+    color: #fa2955;
+}
+
+
+
+#yp-hm-mmv-cont button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+}

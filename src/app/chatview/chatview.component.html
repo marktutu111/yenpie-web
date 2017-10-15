@@ -1,0 +1,63 @@
+<div class="row" id="yp-hm-cht-view" #chatview>
+              
+        <ul>
+        
+            <div *ngFor="let chat of chats$; let i = index;">
+                <div class="row" id="yp-cht-buble-left" *ngIf="chat.isLeft && chat.text">
+                        <span id="yp-cht-buble-date-lft">{{ chat.date }}</span>
+                        <span id="yp-cht-buble-text">{{ chat.message }}</span>
+                </div>
+
+                <div class="row" id="yp-cht-buble-right" *ngIf="chat.isRight && chat.text">
+                        <span id="yp-cht-buble-text">{{ chat.message }}</span>
+                        <span id="yp-cht-buble-date-ryt">{{ chat.date }}</span>
+                </div>
+
+                <div class="row" id="yp-cht-buble-imge-right" *ngIf="chat.isRight && chat.image">
+                        <img [src]="chat.photo" alt="">
+                </div>
+
+                <div class="row" id="yp-cht-buble-imge-left" *ngIf="chat.isLeft && chat.image">
+                        <img [src]="chat.photo" alt="">
+                </div>
+
+                <div class="row" id="yp-cht-buble-emoji-right" *ngIf="chat.isRight && chat.emoji" [innerHTML]="chat.image"></div>
+                <div class="row" id="yp-cht-buble-emoji-left" *ngIf="chat.isLeft && chat.emoji" [innerHTML]="chat.image"></div>
+            </div>
+
+        </ul>
+
+        <div class="row" id="yp-cht-buble-typing" *ngIf="personIsTyping">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <span>Typing...</span>
+        </div>
+
+</div>
+
+
+<div id="yp-hm-cht-em-cont" *ngIf="openEmoji">
+
+    <app-emojis (sendemoji)="sendEmo($event)"></app-emojis>
+    
+</div>
+<div class="row" id="yp-hm-cht-type-view">
+        <div class="col-md-1">
+            <button type="button" class="btn btn-sm" id="yb-hm-cht-btn-pick" (click)="picker.click()">
+                <i class="fa fa-paperclip" aria-hidden="true"></i>
+                <input type="file" accept="image/*" (change)="fileChangeEvent($event)" #picker hidden>
+            </button>
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-sm" id="yb-hm-cht-btn-sticker" (click)="openEmoji = !openEmoji">
+                <i class="fa fa-smile-o" aria-hidden="true"></i>
+            </button>
+        </div>  
+        <div class="col-md">
+            <input type="text" class="form-control form-control-sm" placeholder="Say something." id="yp-hm-cht-message-input" [(ngModel)]="message" (ngModelChange)="typing($event)" (keydown)="onKeydown($event)">
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-sm" id="yp-hm-cht-send-btn" (click)="send()">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </button>
+        </div>
+</div>

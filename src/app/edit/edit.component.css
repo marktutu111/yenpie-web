@@ -1,0 +1,50 @@
+#yp-hm-pr-edit-cont {
+    width: 100%;
+}
+
+
+
+#yp-hm-pr-edit-cont hr {
+    width: 30%;
+    float: left;
+}
+
+
+
+#yp-hm-pf-edit-btns-cont {
+    width: 350px;
+    margin-top: 10px;
+    clear: left;
+    background: #fafafa;
+}
+
+
+
+#yp-hm-pf-edit-btns-cont input {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+
+#yp-hm-pf-edit-btns-cont i {
+    margin: 15px auto;
+    color: #fa2955;
+}
+
+
+#yp-hm-pf-edit-lb i {
+
+    color: #ddd;
+    font-size: 12px;
+    padding: 5px 5px 0 0;
+
+}
+
+
+
+::-webkit-input-placeholder {
+    color: #ddd;
+}

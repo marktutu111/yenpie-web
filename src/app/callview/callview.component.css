@@ -1,0 +1,75 @@
+#yp-hm-callv-cont {
+    width: 100%;
+    height: 94vh;
+    background: #000;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+
+
+#yp-vid-0 {
+    width: 100%;
+    height: 94vh;
+}
+
+
+#yp-vid-1-cont {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+
+}
+
+
+
+
+#yp-hm-callv-controls-cont {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+#yp-hm-callv-controls-cont button {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: solid thin #eee;
+    color: #fa2955;
+    background: transparent;
+    font-size: 15px;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+#yp-hm-callv-controls-cont button:hover {
+    cursor: pointer;
+}
+
+
+
+
+#yp-hm-cal-dur-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 5% auto;
+    text-align: center;
+    color: #eee;
+    font-size: 30px;
+    font-weight: lighter;
+}

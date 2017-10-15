@@ -1,0 +1,29 @@
+<div class="row" id="yp-hm-mmv-all-cont">
+
+  <div class="col-md" id="yp-hm-mmv-cont">
+
+      <ul> 
+
+         <div id="yp-hm-mmv-list-item" *ngFor="let mem of photos$;">
+              <img [src]="mem.photo" alt="">
+         </div>
+        
+      </ul>
+
+      <div id="likes-cont">
+          <span class="fa fa-thumbs-up" aria-hidden="true"></span>
+          <span>{{ likes }}</span>
+      </div>
+
+      <button type="button" name="" id="" class="btn btn-sm btn-block" id="like" *ngIf="!liked" (click)="like()">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+      </button>
+
+      <button type="button" name="" id="" class="btn btn-sm btn-block" id="liked" *ngIf="liked" (click)="unlike()">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+      </button>
+
+    
+  </div>
+  
+</div>

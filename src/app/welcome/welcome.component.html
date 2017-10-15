@@ -1,0 +1,14 @@
+<div class="col" id="yp-auth-btns-container">
+
+      <label>Create an acount or Sign into an existing account.</label>
+      <button type="button" class="btn btn-lg btn-block" id="yp-ld-login-btn" [routerLink]="[{ outlets: {'auth-outlet' : ['login'] }}]">Sign in</button>
+      <button type="button" class="btn btn-secondary btn-lg btn-block" id="yp-ld-signup-btn" [routerLink]="[{ outlets: { 'auth-outlet': ['signup']} }]">Sign up</button>
+
+      <div class="row" id="yp-ld-rcp-container">
+          <div class="col">
+                <button type="button" class="btn" [routerLink]="[{ 'outlets' : { 'auth-outlet': ['reset-password']} }]">Recover password</button>
+                <label>By <strong>Signing up</strong> you agree to our <strong>Terms</strong> and <strong>Conditions.</strong></label>
+          </div>
+      </div>
+
+</div>

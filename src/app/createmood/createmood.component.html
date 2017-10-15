@@ -1,0 +1,31 @@
+<ul id="yp-hm-pf-cm-cont">
+
+       <h2>
+          <span>Create Mood</span>
+       </h2>
+       <hr>
+       <p>Upload mood photo.</p>
+      <div id="yp-hm-pf-cm-photo-cont">
+          <img [src]="moodphoto" alt="">
+
+          <button type="button" id="yp-hm-pf-cm-pik-photo-btn" class="btn btn-block" (click)="pickmood.click()">
+                <i class="fa fa-photo" aria-hidden="true" *ngIf="!savephoto"></i>
+                <i class="fa fa-spinner" aria-hidden="true" *ngIf="savephoto"></i>
+                <input type="file" #pickmood (change)="fileChangeEvent($event)" hidden>
+          </button>
+      </div>
+      <br>
+      <p>Describe your mood, make it short and clear.</p>
+      <div class="row" id="yp-hm-pf-cm-cont">
+            <div class="col-md">
+
+                  <textarea class="form-control" id="exampleTextarea" rows="3" 
+                  [(ngModel)]="description" (blur)="saveDescription()" placeholder="description"></textarea>
+
+            </div>
+            <div class="col-md-2" *ngIf="savedescription">
+              <i class="fa fa-spinner" aria-hidden="true"></i>
+            </div>
+      </div>
+
+</ul>

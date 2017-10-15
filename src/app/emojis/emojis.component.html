@@ -1,0 +1,6 @@
+<u class="emoji-list">
+  
+    <i class="fa fa-spinner fa-spin" aria-hidden="true" *ngIf="!emojis$.length > 0" id="spinner"></i>
+    <li [innerHtml]="emoji" *ngFor="let emoji of emojis$" (click)="sendEmoji(emoji)"></li>
+
+</u>
