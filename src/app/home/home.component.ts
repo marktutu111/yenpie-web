@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
 
                                           this.$userid = $user.uid;
                                           this.profile$vice.$userid = this.$userid;
+                                          this.call$vice.$userid = this.$userid;
                                           this.profile$vice.setOnline();
                                           this.getRequests();
                                           this.getMessages();
@@ -94,7 +95,10 @@ export class HomeComponent implements OnInit {
                                                     content: string = 'No body can see you, click to create a mood and reach friends now.';
 
                                                 this.moodnull$toast = this.ngNotf.error(title, content, options);
-                                                this.moodnull$toast.click.subscribe(() => { this.router.navigate([{ 'outlets' : { '0' : ['profile']} }])})
+                                                this.moodnull$toast.click.subscribe(() => { 
+                                                      this.router.navigate([ 'home' , { 'outlets' : { '0' : ['profile']} }])
+                                                })
+
                                                 return;
 
                                           }
@@ -107,7 +111,9 @@ export class HomeComponent implements OnInit {
                                                     content: string = 'Friends would react to your mood base on your photo.';
 
                                                 this.moodnull$toast = this.ngNotf.error(title, content, options);
-                                                this.moodnull$toast.click.subscribe(() => { this.router.navigate([{ 'outlets' : { '0' : ['profile']} }])})
+                                                this.moodnull$toast.click.subscribe(() => { 
+                                                      this.router.navigate([ 'home' , { 'outlets' : { '0' : ['profile']} }])
+                                                })
                                                 return;
 
                                           }
@@ -120,7 +126,9 @@ export class HomeComponent implements OnInit {
                                                     content: 'Describe your mood in words, people would understand you better.';
                                                     
                                                 this.moodnull$toast = this.ngNotf.error(title, content, options);
-                                                this.moodnull$toast.click.subscribe(() => { this.router.navigate([{ 'outlets' : { '0' : ['profile']} }])})
+                                                this.moodnull$toast.click.subscribe(() => { 
+                                                      this.router.navigate([ 'home' , { 'outlets' : { '0' : ['profile']} }])
+                                                })
                                                 return;
                                           }
 
@@ -136,23 +144,6 @@ export class HomeComponent implements OnInit {
                                     }
 
                         });
-
-
-
-                        
-                        this.call$vice.getIncomingCall().subscribe($incoming => {
-
-                                    if ($incoming) {
-
-                                                this.friend$vice.loadfriendProfile($incoming, ($d: any) => {
-
-                                                            // ..
-
-                                                })
-
-                                    }
-
-                        })
 
 
 

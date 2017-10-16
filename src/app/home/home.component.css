@@ -2,13 +2,19 @@
     margin: 0;
     padding: 0;
     clear: both;
+    position: relative;
+    z-index: 0;
 }
 
 #yp-hm-hd-cont {
         margin: auto;
         height: 6vh;
         background: #fa2955;
-        opacity: 0.9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 10;
 }
 
 
@@ -187,4 +193,79 @@
 #yp-list-item-cont-right #reject {
         background: #ffb6c1;
         color: #8D6D8D;
+}
+
+#yp-incoming-cont {
+        width: 250px;
+        height: 90px;
+        background: #fff;
+        margin: 10px;
+        border-radius: 5px;
+        border: solid thin #eee;
+        position: fixed;
+        bottom: 5vh;
+        right: 0;
+}
+
+
+#yp-incoming-cont #name-cont {
+        font-size: 15px;
+        margin-left: 20px;
+}
+
+#yp-incoming-cont .name {
+        color: #888;
+}
+
+#yp-incoming-cont #photo-cont {
+        display: block;
+        float: left;
+        width: 80px;
+        height: 80px;
+        background: #fff;
+        border: solid thin #eee;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-top: 5px;
+        margin-left: 5px;
+}
+
+
+#yp-incoming-cont #details-cont {
+        float: left;
+        width: auto;
+}
+
+
+#yp-incoming-cont #buttons-cont {
+        width: 100%;
+        float: left;
+        margin-left: 15px;
+}
+
+
+#yp-incoming-cont img {
+        width: 100%;
+}
+
+
+#yp-incoming-cont #ans-button {
+        color: #2ecc71;
+}
+
+
+#yp-incoming-cont button {
+        display: inline-block;
+        height: 40px;
+        width: 60px;
+        font-size: 20px;
+        text-align: center;
+        margin: 0 2px;
+        background: #fff;
+        border: solid thin #eee;
+}
+
+
+#yp-incoming-cont #rej-button {
+        color: #fa2955;
 }

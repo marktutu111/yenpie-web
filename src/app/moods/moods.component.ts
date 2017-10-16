@@ -44,10 +44,12 @@ export class MoodsComponent implements OnInit {
                                                 this.$userid = $user.uid;
                                                 this.md$vice.$userid =$user.uid;
                                                 this.md$vice.loadMoods();
-                                                this.moods$ = this.md$vice.moods$;
                                                 return;
                                         }
                             });
+
+
+                            this.moods$ = this.md$vice.moods$;
                             
                     }
                     

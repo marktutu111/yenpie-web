@@ -171,6 +171,10 @@ export class FriendsService {
                                                         $request.lastMessage = $messages[key].message;
                                                         
                                                 }
+
+                                        }  else  {
+
+                                                $request.lastMessage = '....';
                                         }
 
                                         if ($messages[key].date) $request.message$date = moment(new Date($messages[key].date)).format('LT');

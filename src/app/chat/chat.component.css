@@ -1,10 +1,21 @@
 #yp-hm-cht-cont {
-        height: 90vh;
+        height: 95vh;
+        margin-top: 6vh;
 }
 
 #yp-hm-cht-contacts-cont {
         height: 95vh;
         border-right: solid thin #ddd;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+}
+
+
+
+#yp-hm-cht-contacts-cont .row {
+        margin: 0;
+        padding: 0;
 }
 
 
@@ -55,13 +66,28 @@
 
 #yp-hm-cht-cont-list-item:hover {
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.5);
 }
 
 
 #yp-hm-cht-cont-list-item {
-    padding: 10px;
-    border-bottom: solid thin #eee;
+    display: block;
+    height: 80px;
+    clear: both;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.selected {
+    background: #fafafa;
+}
+
+
+
+#yp-list-photo-cont {
+    float: left;
+    width: 25%;
 }
 
 
@@ -71,7 +97,7 @@
     height: 70px;
     border-radius: 100%;
     border: solid thin #fa2955;
-    margin-left: -30px;
+    margin: 5px auto;
 }
 
 
@@ -85,6 +111,12 @@
 }
 
 
+#yp-list-details-cont {
+    float: left;
+    width: 75%;
+    padding: 10px;
+}
+
 
 
 #yp-hm-cht-list-view {
@@ -93,8 +125,7 @@
     clear: both;
     display: block;
     margin: auto;
-    width: 90%;
-    padding: 10px;
+    width: 100%;
 }
 
 
@@ -104,13 +135,27 @@
 }
 
 
+#yp-list-name-lb {
+    font-size: 20px;
+}
+
 
 #yp-hm-cht-count-badge {
     background: #fa2955;
-    padding: 5px;
+    padding: 2px;
     font-size: 12px;
     border-radius: 2px;
     color: #fff;
+}
+
+
+#yp-list-d-b-cont {
+    float: right;
+}
+
+
+#yp-list-mess-date-lb {
+    width: 15px;
 }
 
 
@@ -227,10 +272,6 @@
     max-width: 60%;
     margin: 10px;
     clear: both;
-    background: #999;
-    color: #fff;
-    padding: 10px;
-    border-radius: 20px;
 }
 
 
@@ -247,21 +288,51 @@
     margin: 10px;
     float: right;
     clear: both;
-    background: #ffb6c1;
-    padding: 10px;
     color: #6D6D6D;
-    border-radius: 50px;
     font-size: 15px;
 }
 
 
+#yp-cht-buble-text {
+    background: #ffb6c1;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+
+#yp-cht-buble-text-more {
+    background: #ffb6c1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
 #yp-cht-buble-date-ryt {
-    margin-left: 10px;
+    margin: 10px;
+    color: #ddd;
 }
 
 
 #yp-cht-buble-date-lft {
-    margin-right: 10px;
+    margin: 10px;
+    color: #ddd;
+}
+
+
+#yp-cht-buble-text-more-lft {
+    background: #ddd;
+    color: #555;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+#yp-cht-buble-text-lft {
+    background: #ddd;
+    color: #555;
+    padding: 10px;
+    border-radius: 50px;
 }
 
 

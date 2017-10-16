@@ -1,5 +1,6 @@
-<ul>
+<ul id="yp-hm-mood-cont">
 
+        <i class="fa fa-circle-o-notch fa-spin" aria-hidden="true" *ngIf="!moods$[0]" id="spinner"></i>
         <div id="yp-hm-mood-sld" *ngFor="let $user of moods$; let i = index">
 
              <div id="yp-hm-md-desc-cont">

@@ -54,11 +54,11 @@
             <router-outlet name="0" *ngIf="!searchWord.length > 0"></router-outlet>
             <app-search-view [searchList$]="searchList$" *ngIf="searchWord.length > 0"></app-search-view>
             <simple-notifications [options]="options"></simple-notifications>
+            <app-incoming-call></app-incoming-call>
 
       </div>
 </div> 
 <!--END MAIN VIEW-->
-
 
 
 <!--FOOTER CONTAINER-->

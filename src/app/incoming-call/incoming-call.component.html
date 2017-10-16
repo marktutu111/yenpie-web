@@ -1,0 +1,18 @@
+<div class="row" id="yp-incoming-cont" *ngIf="incoming">
+     <div id="photo-cont">
+        <img [src]="incoming.photo" alt="">
+    </div>
+    <div id="details-cont">
+        <div id="name-cont">Incoming call..</div>
+        <div id="name-cont" class="name">{{ incoming.name }}</div>
+        <div id="buttons-cont">
+            <button type="button" id="ans-button" class="btn btn-block" (click)="answerCall()" >
+                <i class="fa fa-phone" aria-hidden="true"></i> 
+            </button>
+            <button type="button" class="btn btn-block" id="rej-button" (click)="rejectCall()">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    
+</div>

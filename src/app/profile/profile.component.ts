@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CallService } from "../services/webrtc.service";
+import { Router } from "@angular/router";
+import { Subscription } from "rxjs";
+
 
 
 
@@ -37,29 +40,76 @@ export class ProfileComponent implements OnInit {
                 @Input () personActive: boolean;
 
                 connection: string = "";
+                calling: boolean = false;
+                call$: Subscription;
 
-                constructor (private call$vice: CallService) {}
+                constructor (private call$vice: CallService, private router: Router) {}
                 
 
                 ngOnInit () {}
 
 
 
+
                 call () {
 
-                        try {
+                        this.calling = true;
+                        this.connection = 'Connecting..';
+                        setTimeout(() => {
 
-                            this.call$vice.room$id = this.$request.id;
-                            this.call$vice.start$vice();
-                            this.call$vice.onConn$().subscribe($d => {
+                                this.connection = 'User Buzy';
+                                this.calling = false;
 
-                                      this.call$vice.join$room();
+                        }, 1000 * 3);
+                        
+                        // this.call$vice.checkStatus(this.$request).subscribe($conn => {
 
-                            })
+                        //             if ($conn && $conn === 'busy') {
 
-                        } catch (error) {
-                          
-                        }
+                        //                     this.connection = 'User Busy';
+                        //                     return this.calling = false;
+
+                        //             }
+
+                        //             this.sendCall();
+
+                        // })
+
+                }
+
+
+
+                sendCall () {
+
+                        this.call$vice.call(this.$request);
+                        this.call$vice.ongoingCall(this.$request.key);
+                        this.connection = 'Calling..';
+                        this.call$ = this.call$vice.call$.subscribe($conn => {
+
+                                switch ($conn) {
+                                      case 'answered':
+                                          this.connection = 'Connected';
+                                          this.router.navigate(['home', {'outlets': {'0' : ['call']} }]);
+                                      case 'rejected':
+                                          this.connection = 'Call Rejected';
+                                          this.call$.unsubscribe();
+                                      case 'disconnected':
+                                          this.connection = 'Disconnected';
+                                          this.call$.unsubscribe();
+                                      default:
+                                        break;
+                                }
+
+                        });
+
+                }
+
+
+
+                
+                endCall () {
+
+
 
                 }
 

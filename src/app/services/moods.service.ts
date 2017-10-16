@@ -80,6 +80,7 @@ export class MoodService {
 
                                                             }
 
+                                                            
                                                             if (callback) {
 
                                                                     callback ($user);
@@ -161,7 +162,7 @@ export class MoodService {
 
                                               } else {
 
-                                                    this.moods$.push($user);
+                                                    this.appendFrnds($user);
 
                                               }
                                               
@@ -170,6 +171,16 @@ export class MoodService {
 
 
                     }
+
+
+
+
+                appendFrnds ($friend) {
+
+                        let $match = this.moods$.filter(($frnd: any) => $frnd.key === $friend.key);                
+                        if (!$match[0]) this.moods$.push($friend);                 
+
+                }
 
 
                     

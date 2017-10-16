@@ -17,53 +17,51 @@
 
                         <!--yp-cont-list-->
                         <ul id="yp-hm-cht-list-view" *ngIf="searchList$.length === 0">
-                            <div class="row" id="yp-hm-cht-cont-list-item" *ngFor="let contact of contacts$; let i = index;" (click)="openChat(contact.key)">
-                                <div class="col-md-3" id="yp-hm-cht-list-photo-item">
+                            <div id="yp-hm-cht-cont-list-item" *ngFor="let contact of contacts$" (click)="openChat(contact.key)"
+                                 [class.selected]="$request.key === contact.key">
+
+                                <div id="yp-list-photo-cont">
                                     <div id="yp-list-photo-parent">
                                         <div id="yp-list-photo-child">
                                                 <img [src]="contact.photo" alt="">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md">
-                                    <div style="font-size: 20px;">{{ contact.nickname }}</div>
-                                    <div class="row" style="width: 100%; font-size: 15px;">
-                                        <div class="col-md">
-                                            <span style="color: #ffb6c1;">{{ contact.message$date }}</span>
-                                        </div>  
-                                        <div class="col-md-1" *ngIf="contact.messages > 0">
-                                            <span id="yp-hm-cht-count-badge" style="color: #eee;">{{ contact.messages }}</span>
-                                        </div>
+                                <div id="yp-list-details-cont">
+                                    <span id="yp-list-name-lb">{{ contact.nickname }}</span>
+                                    <div id="yp-list-d-b-cont">
+                                        <span id="yp-list-mess-date-lb">{{ contact.message$date }}</span>
+                                        <span id="yp-hm-cht-count-badge" *ngIf="contact.messages > 0">{{ contact.messages }}</span>
                                     </div>
-                                    <div style="color: #666; font-size: 15px; padding-top: 5px;">
-                                        <span *ngIf="!contact.isTyping">{{ contact.lastMessage }}</span>
-                                        <span *ngIf="contact.isTyping">Typing..</span>
-                                    </div>
+                                    <div *ngIf="!contact.isTyping">{{ contact.lastMessage }}</div>
+                                    <div *ngIf="contact.isTyping">Typing..</div>
                                 </div>
                             </div>
                         </ul>
                         <!--end-->
+
                         <!--yp-contacts-searchlist-->
                         <ul id="yp-hm-cht-list-view" *ngIf="searchList$.length > 0">
-                            <div class="row" id="yp-hm-cht-cont-list-item" *ngFor="let contact of searchList$; let i = index;" (click)="openChat(contact.key)">
-                                <div class="col-md-3" id="yp-hm-cht-list-photo-item">
-                                    <div id="yp-list-photo-parent">
-                                        <div id="yp-list-photo-child">
-                                                <img [src]="contact.photo" alt="">
+                            <div class="row" id="yp-hm-cht-cont-list-item" *ngFor="let contact of searchList$" (click)="openChat(contact.key)">
+                                <div id="yp-hm-cht-cont-list-item" *ngFor="let contact of contacts$" (click)="openChat(contact.key)"
+                                    [class.selected]="$request.key === contact.key">
+
+                                    <div id="yp-list-photo-cont">
+                                        <div id="yp-list-photo-parent">
+                                            <div id="yp-list-photo-child">
+                                                    <img [src]="contact.photo" alt="">
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md">
-                                    <div>{{ contact.nickname }}</div>
-                                    <div class="row" style="width: 100%; font-size: 15px;">
-                                        <div class="col-md">
-                                            <span style="color: #ffb6c1;">{{ contact.message$date }}</span>
-                                        </div>  
-                                        <div class="col-md-1" *ngIf="contact.messages > 0">
-                                            <span id="yp-hm-cht-count-badge">{{ contact.messages }}</span>
+                                    <div id="yp-list-details-cont">
+                                        <span id="yp-list-name-lb">{{ contact.nickname }}</span>
+                                        <div id="yp-list-d-b-cont">
+                                            <span id="yp-list-mess-date-lb">{{ contact.message$date }}</span>
+                                            <span id="yp-hm-cht-count-badge" *ngIf="contact.messages > 0">{{ contact.messages }}</span>
                                         </div>
+                                        <div *ngIf="!contact.isTyping">{{ contact.lastMessage }}</div>
+                                        <div *ngIf="contact.isTyping">Typing..</div>
                                     </div>
-                                    <div style="color: #666; font-size: 15px; padding-top: 5px;">{{ contact.lastMessage }}</div>
                                 </div>
                             </div>
                         </ul>
@@ -82,13 +80,8 @@
                           [$request]="$request" 
                           [personIsTyping]="personIsTyping"
                           *ngIf="!onCall">
-                        
-                                <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" *ngIf="contacts$.length === 0"></i>
+            </app-chatview>
 
-                        </app-chatview>
-
-            <app-callview *ngIf="onCall"></app-callview>
-                
       </div>
 <!--END CHAT SECTION  -->
 

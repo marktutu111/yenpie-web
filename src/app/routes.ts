@@ -16,6 +16,7 @@ import { MemoryComponent } from "./memory/memory.component";
 import { EditComponent } from "./edit/edit.component";
 import { CreatemoodComponent } from "./createmood/createmood.component";
 import { ProfileMainComponent } from "./profile-main/profile-main.component";
+import { CallviewComponent } from "./callview/callview.component";
 
 
 
@@ -39,6 +40,7 @@ export const routes: Routes = [
                     { path: '', component: ProfileMainComponent, outlet: 'p' },
                     { path: 'edit', component: EditComponent, outlet: 'p' },
                     { path: 'create-mood', component: CreatemoodComponent, outlet: 'p' }
-            ]}
+            ]},
+            { path: 'call', component: CallviewComponent, outlet: '0' }    
     ]}
 ]

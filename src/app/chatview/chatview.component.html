@@ -4,18 +4,21 @@
         
             <div *ngFor="let chat of chats$; let i = index;">
                 <div class="row" id="yp-cht-buble-left" *ngIf="chat.isLeft && chat.text">
-                        <span id="yp-cht-buble-date-lft">{{ chat.date }}</span>
-                        <span id="yp-cht-buble-text">{{ chat.message }}</span>
+                        <div id="yp-cht-buble-date-lft">{{ chat.date }}</div>
+                        <div id="yp-cht-buble-text-lft" *ngIf="chat.message.length < 20">{{ chat.message }}</div>
+                        <div id="yp-cht-buble-text-more-lft" *ngIf="chat.message.length > 20">{{ chat.message }}</div>
                 </div>
 
                 <div class="row" id="yp-cht-buble-right" *ngIf="chat.isRight && chat.text">
-                        <span id="yp-cht-buble-text">{{ chat.message }}</span>
-                        <span id="yp-cht-buble-date-ryt">{{ chat.date }}</span>
+                        <div id="yp-cht-buble-text" *ngIf="chat.message.length < 20">{{ chat.message }}</div>
+                        <div id="yp-cht-buble-text-more" *ngIf="chat.message.length > 20">{{ chat.message }}</div>
+                        <div id="yp-cht-buble-date-ryt">{{ chat.date }}</div>
                 </div>
 
                 <div class="row" id="yp-cht-buble-imge-right" *ngIf="chat.isRight && chat.image">
                         <img [src]="chat.photo" alt="">
                 </div>
+
 
                 <div class="row" id="yp-cht-buble-imge-left" *ngIf="chat.isLeft && chat.image">
                         <img [src]="chat.photo" alt="">

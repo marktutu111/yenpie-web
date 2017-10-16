@@ -43,7 +43,11 @@
 
 <div class="row" id="yp-hm-cht-call-buttons-cont">
       <div class="col-md">
-            <button type="button" class="btn btn-sm" id="yp-hm-cht-call-btn" (click)="call()">
+            <button type="button" class="btn btn-sm" id="yp-hm-cht-call-btn" (click)="call()" *ngIf="!calling">
+                <i class="fa fa-video-camera" aria-hidden="true"></i>
+            </button>
+            <!--C-C-B  -->
+            <button type="button" class="btn btn-sm" id="yp-hm-cht-call-btn" (click)="cancel()" *ngIf="calling">
                 <i class="fa fa-video-camera" aria-hidden="true"></i>
             </button>
       </div>

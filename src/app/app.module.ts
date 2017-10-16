@@ -40,6 +40,7 @@ import { CallviewComponent } from './callview/callview.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileMainComponent } from './profile-main/profile-main.component';
 import { EmojisComponent } from './emojis/emojis.component';
+import { IncomingCallComponent } from './incoming-call/incoming-call.component';
 
 
 
@@ -67,7 +68,8 @@ import { EmojisComponent } from './emojis/emojis.component';
           CreatemoodComponent,
           CallviewComponent,
           ProfileMainComponent,
-          EmojisComponent
+          EmojisComponent,
+          IncomingCallComponent
       ],
       imports: [
           BrowserModule,

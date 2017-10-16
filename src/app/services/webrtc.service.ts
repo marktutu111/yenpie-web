@@ -137,7 +137,8 @@ export class CallService {
 
                                         }
 
-                                 })
+                                 });
+
                 })
 
         }
@@ -155,6 +156,10 @@ export class CallService {
 
                                 this.call$.next('connected');
 
+                         }, err => {
+
+                                this.call$.next('error');
+
                          })
 
         }
@@ -167,13 +172,21 @@ export class CallService {
         checkStatus (request: any): Observable<any> {
 
                 return Observable.create(observer => {
-                        this.fbDb.object(`/Profiles/${this.$userid}/call/${request.key}`)
+                        this.fbDb.object(`/Profiles/${this.$userid}/call/`)
                                 .query
                                 .once('value', $d => {
 
                                         if ($d.val()) {
 
-                                                observer.next($d.val().active);
+                                                for (var key in $d.val()) {
+                                                        
+                                                        if (key) {
+
+                                                                observer.next('busy');
+
+                                                        }
+
+                                                }
 
                                         }  else {
 
@@ -186,6 +199,71 @@ export class CallService {
 
         }
 
+
+
+
+        rejectCall (request: any) {
+
+                this.fbDb.object(`/Profiles/${this.$userid}/call/${request.key}`)
+                         .remove()
+                         .then(() => {
+
+                                this.call$.next('canceled');
+
+                         });
+
+        }
+
+
+
+
+
+        onIncomingDisconnect (key) {
+
+                this.fbDb.object(`/Profiles/${this.$userid}/call/${key}`)
+                         .query
+                         .on('child_removed', () => {
+
+                                this.call$.next('disconnected');
+
+                         });
+
+        }
+
+
+
+
+
+        ongoingCall (key) {
+
+
+                this.fbDb.object(`/Profiles/${this.$userid}/call/${key}/active/`)
+                         .valueChanges()
+                         .subscribe($d => {
+                                
+                                if ($d === true) {
+
+                                        this.call$.next('answered');
+
+                                }  else  {
+
+                                        this.call$.next('disconnected');
+                                }
+
+                         });
+
+
+
+                this.fbDb.object(`/Profiles/${this.$userid}/call/${key}/`)
+                         .query
+                         .on('child_removed', () => {
+                                
+                                this.call$.next('rejected');
+
+                         });
+
+
+        }
 
 
 

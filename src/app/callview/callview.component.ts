@@ -3,6 +3,8 @@ import { CallService } from "../services/webrtc.service";
 import { Subscription } from "rxjs";
 
 
+
+
 @Component({
   selector: 'app-callview',
   templateUrl: './callview.component.html',
@@ -19,6 +21,9 @@ export class CallviewComponent implements OnInit {
           minutes: number = 0;
           seconds: number = 0;
           hours: number = 0;
+
+          connected: boolean = false;
+
           callduration: string = `${this.hours} : ${this.minutes} : ${this.seconds}`;
 
           $timer: any;

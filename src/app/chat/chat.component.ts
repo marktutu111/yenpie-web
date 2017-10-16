@@ -80,10 +80,10 @@ export class ChatComponent implements AfterViewInit, OnDestroy {
                                         this.$userid = $user.uid;
                                         this.friend$vice.$userid = $user.uid;
                                         this.friend$vice.loadFriends($friend => {
-                                                this.friend$vice.loadfriendProfile($friend, () => {
+                                                this.friend$vice.loadfriendProfile($friend, ($d) => {
+                                                        
                                                         this.friend$vice.loadChat($friend, ($d) => {
 
-                                                                this.contacts$ = this.friend$vice.friends$;
                                                                 let $first: any = this.contacts$[0];
                                                                 this.personTYping($d);
                                                                 this.getnewMessages($d);
@@ -97,8 +97,7 @@ export class ChatComponent implements AfterViewInit, OnDestroy {
                                                                 
                                                                 this.chatloaded = true;
                                                                 
-                                                                
-                                                        });
+                                                        })
 
                                                 });
 
@@ -115,6 +114,9 @@ export class ChatComponent implements AfterViewInit, OnDestroy {
 
                       });
 
+
+
+                      this.contacts$ = this.friend$vice.friends$;
 
 
               }
@@ -157,18 +159,21 @@ export class ChatComponent implements AfterViewInit, OnDestroy {
                                 if ($cht.type === 'text') {
 
                                         $cht.text = true;
+                                        this.setContactLastMessage($cht);
 
                                 } else if ($cht.type === 'emoji') {
 
                                         $cht.emoji = true;
+                                        this.setContactLastMessage('...');
 
                                 } else {
 
                                         $cht.image = true;
                                         $cht.photo = this.sanitizer.bypassSecurityTrustUrl('data:image/jpg;base64,' + $cht.photo);
+                                        this.setContactLastMessage('...');
                                 }
 
-                                $cht.date = moment(new Date($cht.date)).format('hh : mm');
+                                $cht.date = moment(new Date($cht.date)).format('dd hh:mm');
                                 this.chats$.push($cht);
                                 this.chatviewComponent.scrolltoBottom();
 
@@ -179,6 +184,21 @@ export class ChatComponent implements AfterViewInit, OnDestroy {
                                 
                         }
                         
+              }
+
+
+
+              setContactLastMessage (chat: any) {
+                      
+                        this.contacts$.filter(($cont: any) => {
+
+                                if ($cont.key === this.$request.key) {
+
+                                        $cont.lastMessage = chat.message;
+                                        if (chat.date) $cont.message$date = moment(new Date(chat.date)).format('LT');
+
+                                }
+                        })
               }
 
 

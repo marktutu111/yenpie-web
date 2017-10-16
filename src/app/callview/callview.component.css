@@ -1,9 +1,6 @@
 #yp-hm-callv-cont {
-    width: 100%;
-    height: 94vh;
+    height: 100vh;
     background: #000;
-    position: absolute;
-    top: 0;
     z-index: 0;
 }
 
@@ -11,7 +8,7 @@
 
 #yp-vid-0 {
     width: 100%;
-    height: 94vh;
+    height: 100vh;
 }
 
 
@@ -21,8 +18,7 @@
     right: 0;
     width: 80px;
     height: 80px;
-    margin: 20px;
-
+    margin: 5%;
 }
 
 
@@ -36,7 +32,7 @@
     margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 20%;
 }
 
 
@@ -70,6 +66,28 @@
     margin: 5% auto;
     text-align: center;
     color: #eee;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: lighter;
+}
+
+
+
+#yp-vid-photo-thumnail-cont {
+    height: 100px;
+    width: 100px;
+    border: solid medium #fff;
+    border-radius: 100%;
+    position: absolute;
+    margin: 15% auto;
+    z-index: 10;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+}
+
+
+
+#yp-vid-photo-thumnail-cont img {
+    width: 100%;
 }
